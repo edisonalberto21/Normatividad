@@ -1,0 +1,43 @@
+{
+  "environments": [
+    {
+      "environment": "default",
+      "id": "39f0c1d9-2958-4304-b8d8-607b530d50b6",
+      "name": "Normatividad",
+      "zip": "solution/normatividad.sppkg",
+      "cdn": "<--Ruta de CDN-->",
+      "entries": [
+        {
+          "id": "89bb4f3c-43ae-4576-a8c4-34e7f56fb8e5",
+          "location": "./src/webparts/normatividad/NormatividadWebPart.manifest.json"
+        }
+      ]
+    },
+    {
+      "environment": "dev",
+      "id": "39f0c1d9-2958-4304-b8d8-607b530d50b6",
+      "name": "Normatividad-dev",
+      "zip": "solution/normatividad.sppkg",
+      "cdn": "/CDN/Normatividad",
+      "entries": [
+        {
+          "id": "89bb4f3c-43ae-4576-a8c4-34e7f56fb8e5",
+          "location": "./src/webparts/normatividad/NormatividadWebPart.manifest.json"
+        }
+      ]
+    },
+    {
+      "environment": "uat",
+      "id": "39f0c1d9-2958-4304-b8d8-607b530d50b6",
+      "name": "Normatividad-uat",
+      "zip": "solution/normatividad.sppkg",
+      "cdn": "/CDN/Normatividad",
+      "entries": [
+        {
+          "id": "89bb4f3c-43ae-4576-a8c4-34e7f56fb8e5",
+          "location": "./src/webparts/normatividad/NormatividadWebPart.manifest.json"
+        }
+      ]
+    }
+  ]
+}

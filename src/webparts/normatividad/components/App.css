@@ -1,0 +1,49 @@
+.tabs-normatividad li a{
+    padding: 12px 17px;
+}
+.tabs-normatividad .tab-content{
+       padding-top: 20px;
+   }
+.tabs-normatividad  .nav-tabs{
+       border-bottom: 2px solid white;
+   }
+   
+
+.normatividad-search input{
+   
+       height: 43px;
+   }
+.normatividad-search  button{
+       background-color: var(--clr-white);
+       height: 43px;
+       color: var(--clr-blue-dark);
+       padding: 7px 17px;
+       border-top: 1px solid var(--clr-border-inputs);
+       border-right: 1px solid var(--clr-border-inputs);
+       border-bottom: 1px solid var(--clr-border-inputs);
+       border-left: 0px solid var(--clr-border-inputs);
+       
+}
+
+.normatividad-search  button:hover{
+    background-color: var(--clr-blue-dark) !important;
+    color: white;
+    padding: 7px 17px;
+}
+
+.sn-descargables-articulos-contenidos {
+    width: 100%;
+    background-color: white;
+}
+
+.normatividad-search input[type=text] {
+    border: 1px solid #ced4da !important;
+}
+
+.normatividad-search input[type=text]:hover{
+    border: 1px solid #ced4da !important;
+}
+
+.titulonorma{
+    margin-top: -30px;
+}

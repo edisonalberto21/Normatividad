@@ -1,0 +1,11 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "onprem19",
+    "version": "1.11.0",
+    "libraryName": "normatividad",
+    "libraryId": "8cc29bbc-2353-4be6-8787-b539d871c525",
+    "packageManager": "npm",
+    "componentType": "webpart"
+  }
+}

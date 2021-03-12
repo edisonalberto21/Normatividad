@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "normatividad-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/normatividad/NormatividadWebPart.js",
+          "manifest": "./src/webparts/normatividad/NormatividadWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "NormatividadWebPartStrings": "lib/webparts/normatividad/loc/{locale}.js"
+  }
+}
