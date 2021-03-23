@@ -5,6 +5,7 @@ import pnp, {  } from "sp-pnp-js";
 import { Items } from './Items';
 import { INormatividadState } from './INormatividadState';
 
+var validar = false;
 export default class Normatividad extends React.Component<INormatividadProps,INormatividadState > {
 
   public miArray1 = []; 
@@ -44,7 +45,8 @@ export default class Normatividad extends React.Component<INormatividadProps,INo
 
    useEffect(){
     setTimeout(() => {
-      document.getElementById('Decretos').click()
+      document.getElementById('Decretos').click();
+     // document.getElementById('boton_busqueda').style.display = "none"
     }, 500);
    }
 
@@ -57,9 +59,9 @@ export default class Normatividad extends React.Component<INormatividadProps,INo
       var newDate = item.Modified.split('T')[0];   //Configura la fecha a visualizar 
       var titulo =  item.Title ? item.Title : "";
        if(titulo.toLowerCase().indexOf(this.state.search.toLowerCase())!= -1){  
-       
+        document.getElementById('boton_busqueda').style.display = "none"
       return(
-            <div className="col-12 mb-3">
+            <div className="col-12 mb-3" id="intel">
             <a href={item.FileRef} target="_blank"  title=""  className="sn-descargables-articulos-contenidos">
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="39.646" height="39.066" viewBox="0 0 39.646 39.066">
@@ -82,7 +84,7 @@ export default class Normatividad extends React.Component<INormatividadProps,INo
           <div className="row no-gutters">
               <div className="col-12">
                   <div className="sn-intro-boletines">
-                      <h5>Normatividad</h5>
+                      <h5>{this.props.description}</h5>
 
                   </div>
               </div>
@@ -93,10 +95,10 @@ export default class Normatividad extends React.Component<INormatividadProps,INo
                       <div className="input-group mb-3">
                           <input type="text" className="form-control" placeholder="Busca un documento" onChange={e => this.setState({ search:e.target.value })} aria-label="Busca un documento" aria-describedby="button-addon2"/>
                           <div className="input-group-append">
-                            <button className="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+                            <button className="btn btn-outline-secondary"  type="button" onClick={this.Boton} id="button-addon2">Buscar</button>
                           </div>
                         </div>
-
+                        <small role="alert" style={{display: "none"}} className="alert alert-warning" id="boton_busqueda" >No se encontraron resultados.</small>
                   </div>
               </div>
 
@@ -133,6 +135,14 @@ export default class Normatividad extends React.Component<INormatividadProps,INo
   </section>
     );
   }
+
+  Boton = ()=>{         //Redirige el evento del boton configurado desde las propiedades de la webpart
+    event.preventDefault()
+    if(!document.getElementById('intel')){
+      document.getElementById('boton_busqueda').style.display = "block"
+    }
+   }  
+
   public miArray = [];  
   private Memorandos(): void {                                                      //Metodo para actualizar el estado con la consulta a la lista Eventos
      
